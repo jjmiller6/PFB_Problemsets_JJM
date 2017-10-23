@@ -1,0 +1,24 @@
+Unix1: question 7
+
+How many lines?
+wc -l < sequences.nt.fa 
+148
+
+How many characters?
+wc -c < sequences.nt.fa 
+10267
+
+What is the first line of this file?
+head -n 1 < sequences.nt.fa 
+>NM_001126114.2 Homo sapiens tumor protein p53 (TP53), transcript variant 3, mRNA
+
+What are the last 3 lines?
+tail -n 3 < sequences.nt.fa
+TTTATAGCTGTTGGAAGGACTAGGTCTTCCCTAGCCCCCCCAGTGTGCAAGGGCAGTGAAGACTTGATTG
+TACAAAATACGTTTTGTAAATGTTGTGCTGTTAACACTGCAAATAAACTTGGTAGCAAACACTTCCAAAA
+AAAAAAAAAAAAAA
+
+How many sequences in the file?
+grep -c  ">" < sequences.nt.fa 
+2
+

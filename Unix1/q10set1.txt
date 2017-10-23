@@ -1,0 +1,24 @@
+Unix1: Question 10
+
+Look at the last few lines of the file
+tail -n 5 < cuffdiff.txt
+
+Pay attention to general numeric sort (-g) and string numberic sort (-n)
+
+Sort file by log fold change (column 10), from highest to lowest, save in a new file called sorted.cuffdiff.out
+
+sort -k 10 -g -r cuffdiff.txt | column -t > sorted.cuffdiff.out
+
+sort file, print only first 100 lines, save in top100.sorted.cuffdiff.out
+head -n 100 sorted.cuffdiff.out > top100.sorted.cuffdiff.out
+
+
+Sort the file by log fold change, print out the top 100, print only first column. This will be a list of the genes with the largest change in expression. Make sure your list is sorted by gene name and is unique. Save this curated list in a file called differentially.expressed.genes.txt.
+
+sort -k10gr cuffdiff.txt | head -n 100 | cut -f1 > differentially.expressed.genes.txt
+can't use column transformed file? (does something with separation?)
+
+
+figured it out! 
+cut -d' ' -f1 top100.sorted.cuffdiff.out 
+this is how you specify that deliminator is white space -d ' ' (put a space in there. 
