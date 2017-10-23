@@ -1,0 +1,500 @@
+   69  ls
+   70  cd PFB2017/
+   71  ls
+   72  cd Unix1/
+   73  ls
+   74  cat blablabla.txt
+   75  cat blablabla.txt 2> errors.txt
+   76  ls
+   77  vim errors.txt 
+   78  ls
+   79  rm errors.txt 
+   80  ls
+   81  cat blablabla.txt > errors.txt
+   82  ls
+   83  vim errors.txt 
+   84  ls
+   85  rm errors.txt 
+   86  cat fav_chr_cuffdiff.txt blablabla.file
+   87  cat fav_chr_cuffdiff.txt blablabla.file > out.txt 2> err.txt
+   88  ls
+   89  vim err.txt 
+   90  vim out.txt 
+   91  rm err.txt out.txt 
+   92  ls
+   93  ~
+   94  cd
+   95  ls 
+   96  pwd
+   97  ls
+   98  cd PFB2017/Unix1/
+   99  ls
+  100  pwd
+  101  cd
+  102  cd ..
+  103  ls
+  104  cd /Users/JJM/PFB2017/Unix1
+  105  ls
+  106  pwd
+  107  wget https://raw.githubusercontent.com/srobb1/pfb2017/master/files/sequences.nt.fa
+  108  man curl
+  109  man curl
+  110  curl -O https://raw.githubusercontent.com/srobb1/pfb2017/master/files/sequences.nt.fa
+  111  ls
+  112  vim sequences.nt.fa 
+  113  PWD
+  114  pwd
+  115  wc -l < sequences.nt.fa 
+  116  wc -c < sequences.nt.fa 
+  117  man head
+  118  head -n 1 < sequences.nt.fa 
+  119  man tail
+  120  tail -n 3 < sequences.nt.fa 
+  121  man grep
+  122  grep "<" < sequences.nt.fa 
+  123  grep ">" < sequences.nt.fa 
+  124  man grep
+  125  grep -c  ">" < sequences.nt.fa 
+  126  curl -0 https://raw.githubusercontent.com/srobb1/pfb2017/master/files/cuffdiff.txt
+  127  ls
+  128  curl -0 https://raw.githubusercontent.com/srobb1/pfb2017/master/files/cuffdiff.txt > cuffdiff.txt
+  129  ls
+  130  vim cuffdiff.txt 
+  131  ls
+  132  vim cuffdiff.txt 
+  133  tail -n 5 < cuffdiff.txt 
+  134  man sort
+  135  sort -n -k 10 cuffdiff.txt | head
+  136  sort -n -k 4 cuffdiff.txt | head
+  137  sort -n -k 4 cuffdiff.txt | head -n 2
+  138  man column
+  139  head -n 5 cuffdiff.txt | column -c 10
+  140  man column
+  141  head -n 5 cuffdiff.txt | column -s
+  142  head -n 5 cuffdiff.txt | column -s 10
+  143  sort -n -k 10 cuffdiff.txt | column -s 10 | head n -5
+  144  sort -n -k 10 cuffdiff.txt | column -s 10 | head -n 5
+  145  man column
+  146  sort -n -k 10 cuffdiff.txt | column -t | head -n 5
+  147  sort -n -k 10 cuffdiff.txt | column -t | head
+  148  man sort
+  149  sort -n -k 10 -g cuffdiff.txt | column -t | head
+  150  man sort
+  151  sort -k 10 -g cuffdiff.txt | column -t | head
+  152  sort -k 10 -g -r cuffdiff.txt | column -t | head
+  153  sort -k 10 -g -r cuffdiff.txt | column -t > sorted.cuffdiff.out
+  154  vim sorted.cuffdiff.out 
+  155  head -n 5 sorted.cuffdiff.out 
+  156  head -n 100 sorted.cuffdiff.out > top100.sorted.cuffdiff.out 
+  157  vim top100.sorted.cuffdiff.out 
+  158  top100.sorted.cuffdiff.out 
+  159  man column
+  160  man sort
+  161  man cut
+  162  cut -f 1 top100.sorted.cuffdiff.out 
+  163  cut -f 1 top100.sorted.cuffdiff.out 
+  164  cut -f1 top100.sorted.cuffdiff.out 
+  165  cut -f1 top100.sorted.cuffdiff.out 
+  166  cat top100.sorted.cuffdiff.out 
+  167  cat top100.sorted.cuffdiff.out 
+  168  wc -l top100.sorted.cuffdiff.out 
+  169  wc -l <  top100.sorted.cuffdiff.out 
+  170  cut -f1 < top100.sorted.cuffdiff.out 
+  171  cut -f1 < top100.sorted.cuffdiff.out 
+  172  man cut
+  173  cut -f1 < top100.sorted.cuffdiff.out 
+  174  man cut
+  175  cut -d(\t) -f1 < top100.sorted.cuffdiff.out 
+  176  cut -d('\t') -f1 < top100.sorted.cuffdiff.out 
+  177  cut -d['\t'] -f1 < top100.sorted.cuffdiff.out 
+  178  cut -d[\t] -f1 < top100.sorted.cuffdiff.out 
+  179  cut -d[ ] -f1 < top100.sorted.cuffdiff.out 
+  180  cut -d\t -f1 < top100.sorted.cuffdiff.out 
+  181  ls
+  182  sort -k10gr cuffdiff.txt | head -n 100 | cut -f1
+  183  sort -k10gr cuffdiff.txt | head -n 100
+  184  sort -k10gr cuffdiff.txt | head -n 100 | cut -f1
+  185  sort -k10gr cuffdiff.txt | head -n 100 | cut -f1 > differentially.expressed.genes.txt
+  186  vim differentially.expressed.genes.txt 
+  187  wc -l differentially.expressed.genes.txt 
+  188  wc -l < differentially.expressed.genes.txt 
+  189  man column
+  190  man cut
+  191  ls
+  192  cat top100.sorted.cuffdiff.out 
+  193  cut -d'' -f1 top100.sorted.cuffdiff.out 
+  194  cut -d' ' -f1 top100.sorted.cuffdiff.out 
+  195  cd /Users/JJM/PFB2017/Unix2
+  196  ls
+  197  echo "# jjm_pfb2017_repository" >> README.md
+  198  ls
+  199  rm README.md 
+  200  ls
+  201  cd ..
+  202  ls
+  203  cd ..
+  204  ls
+  205  echo "# jjm_pfb2017_repository" >> README.md
+  206  git init
+  207  ls
+  208  git add README.md
+  209  git commit -m 'first comment'
+  210  git remote add origin https://github.com/jjmiller6/jjm_pfb2017_repository.git
+  211  git push -u origin master
+  212  ls
+  213  cd ..
+  214  ls
+  215  cd JJM
+  216  mkdir PFB2017_problemsets
+  217  ls
+  218  echo "# PFB2017_problemsets" >> README.md
+  219  git init
+  220  git commit -m 'first comment'
+  221  git remote add origin https://github.com/jjmiller6/jjm_pfb2017_repository
+  222  ls
+  223  ls -a
+  224  cd PFB2017
+  225  ls
+  226  mvdir Unix1 ../PFB2017_problemsets/
+  227  mv Unix1 ../PFB2017_problemsets/
+  228  ls
+  229  cd Unix2/
+  230  ls
+  231  rmdir Unix2/
+  232  ls
+  233  ls
+  234  cd ..
+  235  ls
+  236  rm Unix2/
+  237  rmdir Unix2/
+  238  ls
+  239  cd ..
+  240  ls
+  241  cd PFB2017
+  242  ls
+  243  cd ..
+  244  rmdir PFB2017
+  245  ls
+  246  cd PFB2017_problemsets/
+  247  ls
+  248  cd Unix1/
+  249  ls
+  250  cd ..
+  251  ls
+  252  cd ..
+  253  ls
+  254  cd PFB2017_problemsets/
+  255  ls
+  256  git add Unix1/
+  257  git commit -m 'Added Unix1 dir'
+  258  git push origin master
+  259  pwd
+  260  cd ..
+  261  ls
+  262  mv README.md > PFB2017_problemsets/
+  263  mv README.md >> PFB2017_problemsets/
+  264  git add *
+  265  cd /Users/JJM/PFB2017/Unix1
+  266  vim q7set1.txt
+  267  ls
+  268  mv sequences.nt.fa cancer_genes.fasta
+  269  ls
+  270  ls
+  271  vim q10set1.txt
+  272  vim q7set1.txt 
+  273  vim q10set1.txt 
+  274  vim q10set1.txt 
+  275  ls
+  276  cd ..
+  277  ls
+  278  ls -F
+  279  mkdir Unix2/
+  280  ls
+  281  cd Unix2/
+  282  pwd
+  283  git status
+  284  ls
+  285  ls -ls
+  286  ls -la
+  287  rm -rf .git/
+  288  ls -la
+  289  ls
+  290  cd PFB2017_problemsets/
+  291  ls
+  292  cd Unix
+  293  cd Unix1/
+  294  ls
+  295  cd ..
+  296  ls
+  297  cd ..
+  298  ls
+  299  git add
+  300  rm -rf .git
+  301  ls
+  302  ls -a
+  303  rm README.md 
+  304  ls
+  305  ls -a
+  306  git add *
+  307  ls
+  308  cd PFB2017_problemsets/
+  309  ls
+  310  ls -a
+  311  ls
+  312  cd ..
+  313  ls
+  314  ls -a
+  315  ls
+  316  cd PFB2017_problemsets/
+  317  echo "# jjm_pfb2017_repository" >> README.md
+  318  git init
+  319  git add README.md
+  320  git commit -m "comment"
+  321  git push -u origin master
+  322  ls
+  323  git add Unix1/
+  324  git commit -m "comment"
+  325  git push -u origin master
+  326  ls
+  327  cd ..
+  328  ls
+  329  ls -a
+  330  ls
+  331  git add *
+  332  cd PFB2017_problemsets/
+  333  ls
+  334  ls -a
+  335  ls
+  336  git init
+  337  git add *
+  338  git status
+  339  git commit -m "comment"
+  340  git push
+  341  git
+  342  ls
+  343  ls -a
+  344  rm .git
+  345  git rm r .git/
+  346  git rm -r .git/
+  347  ls
+  348  echo "# PFB_Problemsets_JJM"
+  349  echo "# PFB_Problemsets_JJM" >> README.md
+  350  ls
+  351  git init
+  352  git commit -m 'first comment'
+  353  git remote add origin https://github.com/jjmiller6/PFB_Problemsets_JJM.git
+  354  git push -u origin master
+  355  ls
+  356  cat README.md 
+  357  ls -a
+  358  ls
+  359  README.md < PFB_Problemsets_JJM
+  360  vim README.md 
+  361  ls
+  362  vim practice.txt
+  363  ls
+  364  cd ..
+  365  ls
+  366  git add *
+  367  ls PFB2017_problemsets/
+  368  git add *
+  369  ls -a
+  370  ls
+  371  cd PFB
+  372  cd PFB2017_problemsets/
+  373  ls 
+  374  ls -a
+  375  git add *
+  376  git commit -m 'practice'
+  377  git push -u origin master
+  378  ls
+  379  rm practice.txt 
+  380  ls
+  381  git add *
+  382  git commit -m 'removed practice.txt for practice'
+  383  git push -u origin master
+  384  ls
+  385  git add *
+  386  git commit -m 'retry'
+  387  git status
+  388  ls
+  389  git status
+  390  git add *
+  391  git commit -m 'comment'
+  392  git push -u origin master
+  393  git rm practice.txt
+  394  git commit -m 'l'
+  395  git push origin master
+  396  ls
+  397  cd ..
+  398  /usr/src
+  399  cd /usr/src
+  400  cd 
+  401  ls /
+  402  cd usr
+  403  cd /usr
+  404  ls
+  405  cd /bin
+  406  ls
+  407  mkdir miniconda
+  408  cd
+  409  ls
+  410  cd /Applications/
+  411  ls
+  412  mkdir miniconda
+  413  ls
+  414  ls
+  415  cd miniconda/
+  416  ls
+  417  bash Miniconda3-latest-MacOSX-x86_64.sh
+  418  ls
+  419  cd ENTER
+  420  ls
+  421  mv LICENSE.txt ../
+  422  ls
+  423  mv * ../
+  424  ls
+  425  cd ..
+  426  ls
+  427  cd ENTER
+  428  ls
+  429  rm ENTER
+  430  rmdir ENTER
+  431  ls
+  432  ls
+  433  cd ..
+  434  ls
+  435  rm ENTER
+  436  rmdir ENTER/
+  437  ls
+  438  cd ..
+  439  ls
+  440  cd miniconda
+  441  ls
+  442  cd
+  443  ls
+  444  sudo conda install biopython
+  445  sudo conda install biopython
+  446  conda
+  447  ls
+  448  cd Applications/
+  449  ls
+  450  ls
+  451  cd
+  452  ls
+  453  cd Applications/
+  454  ls
+  455  ls
+  456  cd
+  457  ls
+  458  cd ..
+  459  ls
+  460  cd ..
+  461  ls
+  462  cd Applications/
+  463  ls
+  464  sudo conda install biopython
+  465  cd
+  466  conda install biopython
+  467  cd ..
+  468  cd ..
+  469  ls
+  470  conda
+  471  conda
+  472  cd ..
+  473  ls
+  474  cd ..
+  475  ls
+  476  cd Applications/
+  477  ls
+  478  miniconda
+  479  cd miniconda/
+  480  ls
+  481  cd ..
+  482  ls
+  483  rm -fr miniconda/
+  484  ls
+  485  bash Miniconda3-latest-MacOSX-x86_64.sh
+  486  cd 
+  487  ls
+  488  cd Desktop/
+  489  ls
+  490  bash Miniconda3-latest-MacOSX-x86_64.sh
+  491  conda
+  492  conda install biopython
+  493  python3
+  494  ls
+  495  ls -a
+  496  ls
+  497  cd miniconda3/
+  498  ls
+  499  cd ..
+  500  ls
+  501  ls
+  502  cd PFB2017_problemsets/
+  503  ls
+  504  mkdir Unix2
+  505  ls
+  506  pwd
+  507  cd Unix2/
+  508  vi mysequences.txt
+  509  vim mysequences.txt
+  510  ls
+  511  git add mysequences.txt 
+  512  git commit -m 'adding first txt file'
+  513  git push -u origin master
+  514  ls
+  515  mkdir fastas
+  516  ls
+  517  ls -F
+  518  cd ..
+  519  ls
+  520  cd Unix1
+  521  ls
+  522  man copy
+  523  man cp
+  524  ls
+  525  cd ..
+  526  ls
+  527  cd Unix2
+  528  ls
+  529  pwd
+  530  cd ..
+  531  cd ..
+  532  ls
+  533  cd PFB2017_problemsets/
+  534  ls
+  535  cd Unix1/
+  536  ls
+  537  cp cancer_genes.fasta /Users/JJM/PFB2017_problemsets/Unix2
+  538  ls
+  539  cd ..
+  540  ls
+  541  cd Unix2/
+  542  ls
+  543  cd ..
+  544  ls
+  545  cd Unix1
+  546  ls
+  547  rm cancer_genes.fasta 
+  548  ls
+  549  git add *
+  550  git commit -m 'removed cancer_genes.fasta from Unix1/ and added to Unix2/'
+  551  git push origin master
+  552  ls
+  553  cd ..
+  554  ls
+  555  git add *
+  556  git commit -m 'removed cancer_genes.fasta from Unix1/ to Unix2/'
+  557  git push origin master
+  558  man rm
+  559  rm cp
+  560  man cp
+  561  history
+  562  history > unixBasics.history.txt
+  563  ls
+  564  rm unixBasics.history.txt 
+  565  ls
+  566  cd Unix2/
+  567  ls
+  568  history > unixBasics.history.txt
